@@ -10,346 +10,352 @@
 
 <style>
 :root {
-  --gold: #d9b56d;
-  --gold-light: #ffe6a1;
-  --background: #080808;
+    --gold: #d9b56d;
+    --gold-light: #ffe6a1;
+    --bg: #080808;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #29200e, #080808 60%);
-  color: #fff;
-  line-height: 1.7;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #29200e, #080808 60%);
+    color: #fff;
+    line-height: 1.7;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
-  max-width: 1150px;
-  margin: auto;
-  padding: 25px 20px 60px;
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 20px 60px;
 }
 
 /* HEADER */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
 }
 
 .logo {
-  color: var(--gold);
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 2px;
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .header-tag {
-  font-size: 12px;
-  color: #aaa;
-  letter-spacing: 2px;
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 2px;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 35px 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 35px 0 60px;
 }
 
 .eyebrow {
-  color: var(--gold);
-  letter-spacing: 3px;
-  font-size: 12px;
-  text-transform: uppercase;
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(45px, 7vw, 80px);
-  line-height: 1.1;
-  margin: 15px 0;
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.1;
+    margin: 15px 0;
 }
 
 h1 span {
-  color: var(--gold-light);
+    color: var(--gold-light);
 }
 
 .intro {
-  color: #bbb;
-  font-size: 16px;
-  max-width: 550px;
+    color: #bbb;
+    font-size: 16px;
+    max-width: 550px;
 }
 
 /* BUTTONS */
 
 .actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 13px 22px;
-  border-radius: 50px;
-  border: 1px solid #725b2d;
-  font-size: 14px;
-  font-weight: bold;
-  transition: 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 22px;
+    border-radius: 50px;
+    border: 1px solid #725b2d;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .btn-gold {
-  background: linear-gradient(120deg, #bd9143, #ffe5a0);
-  color: #171006;
-  border: none;
+    background: linear-gradient(120deg, #bd9143, #ffe5a0);
+    color: #171006;
+    border: none;
 }
 
 /* PROFILE CARD */
 
 .profile {
-  text-align: center;
-  padding: 28px;
-  border-radius: 30px;
-  background: linear-gradient(145deg, #262015, #111);
-  border: 1px solid #70582c;
-  box-shadow: 0 15px 50px #0008;
+    text-align: center;
+    padding: 28px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #262015, #111);
+    border: 1px solid #70582c;
+    box-shadow: 0 15px 50px #0008;
 }
 
-/* PROFILE PHOTO */
+/* PROFILE IMAGE */
 
 .photo {
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto;
-  border: 4px solid var(--gold);
-  background: #111;
-  box-shadow: 0 0 30px #d9b56d40;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: 4px solid var(--gold);
+    background: #111;
+    box-shadow: 0 0 30px #d9b56d40;
 }
 
 .photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
-  /* Face center positioning */
-  object-position: center 16%;
+    /* Face centered */
+    object-position: center 15%;
 }
 
 .profile h2 {
-  margin-top: 18px;
-  font-size: 26px;
+    margin-top: 18px;
+    font-size: 26px;
 }
 
 .profile p {
-  color: var(--gold);
-  font-size: 14px;
+    color: var(--gold);
+    font-size: 14px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .section-title {
-  font-size: 28px;
-  margin-bottom: 22px;
+    font-size: 28px;
+    margin-bottom: 22px;
 }
 
 .section-title span {
-  color: var(--gold-light);
+    color: var(--gold-light);
 }
 
-/* PERSONAL PROFILE */
+/* PERSONAL DETAILS */
 
 .details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
 }
 
 .detail {
-  padding: 16px;
-  background: #141414;
-  border: 1px solid #292929;
-  border-radius: 14px;
+    padding: 16px;
+    background: #141414;
+    border: 1px solid #292929;
+    border-radius: 14px;
 }
 
 .detail small {
-  display: block;
-  color: #999;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1px;
+    display: block;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 
 .detail strong {
-  color: #f4e5bd;
-  font-size: 15px;
+    color: #f4e5bd;
+    font-size: 15px;
 }
 
 /* SERVICES */
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
 .card {
-  background: linear-gradient(145deg, #191919, #101010);
-  border: 1px solid #292929;
-  border-radius: 18px;
-  padding: 24px;
-  transition: 0.3s;
+    background: linear-gradient(145deg, #191919, #101010);
+    border: 1px solid #292929;
+    border-radius: 18px;
+    padding: 24px;
+    transition: 0.3s;
 }
 
 .card:hover {
-  border-color: var(--gold);
-  transform: translateY(-4px);
+    border-color: var(--gold);
+    transform: translateY(-4px);
 }
 
 .icon {
-  font-size: 28px;
-  color: var(--gold);
-  margin-bottom: 10px;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 10px;
 }
 
 .card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 .card p {
-  color: #aaa;
-  font-size: 14px;
+    color: #aaa;
+    font-size: 14px;
 }
 
 /* TECHNOLOGIES */
 
 .tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .tool {
-  padding: 10px 18px;
-  background: #18150f;
-  border: 1px solid #6b542c;
-  border-radius: 50px;
-  color: var(--gold-light);
-  font-size: 13px;
-  font-weight: bold;
+    padding: 10px 18px;
+    background: #18150f;
+    border: 1px solid #6b542c;
+    border-radius: 50px;
+    color: var(--gold-light);
+    font-size: 13px;
+    font-weight: bold;
 }
 
 /* CONTACT */
 
 .contact {
-  text-align: center;
-  padding: 35px 20px;
-  border: 1px solid #6b542c;
-  border-radius: 25px;
-  background: linear-gradient(130deg, #211a0c, #111);
+    text-align: center;
+    padding: 35px 20px;
+    border: 1px solid #6b542c;
+    border-radius: 25px;
+    background: linear-gradient(130deg, #211a0c, #111);
 }
 
 .contact h2 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .contact p {
-  color: #aaa;
-  margin: 10px 0 20px;
+    color: #aaa;
+    margin: 10px 0 20px;
 }
 
 .contact .actions {
-  justify-content: center;
+    justify-content: center;
 }
 
 .whatsapp {
-  background: #16b858;
-  color: white;
-  border: none;
+    background: #16b858;
+    color: white;
+    border: none;
 }
 
 .email {
-  background: #1769e8;
-  color: white;
-  border: none;
+    background: #1769e8;
+    color: white;
+    border: none;
 }
 
 /* FOOTER */
 
 footer {
-  margin-top: 35px;
-  text-align: center;
-  color: #888;
-  font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
 }
 
-/* MOBILE RESPONSIVE */
+/* RESPONSIVE */
 
 @media(max-width: 750px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
+    .hero {
+        grid-template-columns: 1fr;
+    }
 
-  .profile {
-    max-width: 450px;
-    margin: auto;
-    width: 100%;
-  }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        max-width: 450px;
+        margin: auto;
+        width: 100%;
+    }
 }
 
 @media(max-width: 450px) {
-  .details {
-    grid-template-columns: 1fr;
-  }
 
-  .container {
-    padding: 20px 14px;
-  }
+    .details {
+        grid-template-columns: 1fr;
+    }
 
-  .photo {
-    width: 200px;
-    height: 200px;
-  }
+    .container {
+        padding: 20px 14px;
+    }
 
-  h1 {
-    font-size: 48px;
-  }
+    .photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .header-tag {
+        font-size: 10px;
+    }
 }
 </style>
 </head>
@@ -359,52 +365,66 @@ footer {
 <div class="container">
 
 <header>
-  <div class="logo">DS / DEVELOPER</div>
-  <div class="header-tag">PORTFOLIO 2026</div>
+    <div class="logo">DS / DEVELOPER</div>
+    <div class="header-tag">PORTFOLIO 2026</div>
 </header>
 
 <main>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <div class="hero">
 
-  <div>
-    <div class="eyebrow">
-      Developer · Creator · Problem Solver
+    <div>
+
+        <div class="eyebrow">
+            Developer · Creator · Problem Solver
+        </div>
+
+        <h1>
+            Dolat <span>Sahu</span>
+        </h1>
+
+        <p class="intro">
+            I build clean, modern and high-performance
+            websites and applications. From personal
+            portfolios to business solutions, I turn
+            ideas into digital experiences.
+        </p>
+
+        <div class="actions">
+
+            <a href="#contact" class="btn btn-gold">
+                Let's Work Together ↗
+            </a>
+
+            <a href="#services" class="btn">
+                Explore Services
+            </a>
+
+        </div>
+
     </div>
 
-    <h1>Dolat <span>Sahu</span></h1>
+    <!-- PROFILE -->
 
-    <p class="intro">
-      I build clean, modern and high-performance websites
-      and applications. From personal portfolios to business
-      solutions, I turn ideas into digital experiences.
-    </p>
+    <div class="profile">
 
-    <div class="actions">
-      <a href="#contact" class="btn btn-gold">
-        Let's Work Together ↗
-      </a>
+        <div class="photo">
 
-      <a href="#services" class="btn">
-        Explore Services
-      </a>
+            <img
+                src="https://sahudolat21-svg.github.io/dolat-bio/profile.png"
+                alt="Dolat Sahu Profile Photo"
+                onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/sahudolat21-svg/dolat-bio/main/profile.png';"
+            >
+
+        </div>
+
+        <h2>Dolat Sahu</h2>
+
+        <p>Web &amp; App Developer</p>
+
     </div>
-  </div>
-
-  <!-- PROFILE PHOTO -->
-
-  <div class="profile">
-
-    <div class="photo">
-      <img src="profile.jpg" alt="Dolat Sahu Profile Photo">
-    </div>
-
-    <h2>Dolat Sahu</h2>
-    <p>Web &amp; App Developer</p>
-
-  </div>
 
 </div>
 
@@ -412,43 +432,43 @@ footer {
 
 <section>
 
-  <h2 class="section-title">
-    Personal <span>Profile</span>
-  </h2>
+    <h2 class="section-title">
+        Personal <span>Profile</span>
+    </h2>
 
-  <div class="details">
+    <div class="details">
 
-    <div class="detail">
-      <small>Date of Birth</small>
-      <strong>24 November 2012</strong>
+        <div class="detail">
+            <small>Date of Birth</small>
+            <strong>24 November 2012</strong>
+        </div>
+
+        <div class="detail">
+            <small>Height</small>
+            <strong>5.6 Feet</strong>
+        </div>
+
+        <div class="detail">
+            <small>Education</small>
+            <strong>IIT</strong>
+        </div>
+
+        <div class="detail">
+            <small>Religion / Community</small>
+            <strong>Hindu · SAHU</strong>
+        </div>
+
+        <div class="detail">
+            <small>Marital Status</small>
+            <strong>Unmarried</strong>
+        </div>
+
+        <div class="detail">
+            <small>Skills</small>
+            <strong>Website &amp; App Development</strong>
+        </div>
+
     </div>
-
-    <div class="detail">
-      <small>Height</small>
-      <strong>5.6 Feet</strong>
-    </div>
-
-    <div class="detail">
-      <small>Education</small>
-      <strong>IIT</strong>
-    </div>
-
-    <div class="detail">
-      <small>Religion / Community</small>
-      <strong>Hindu · SAHU</strong>
-    </div>
-
-    <div class="detail">
-      <small>Marital Status</small>
-      <strong>Unmarried</strong>
-    </div>
-
-    <div class="detail">
-      <small>Skills</small>
-      <strong>Website &amp; App Development</strong>
-    </div>
-
-  </div>
 
 </section>
 
@@ -456,49 +476,49 @@ footer {
 
 <section id="services">
 
-  <h2 class="section-title">
-    What I Can <span>Develop For You</span>
-  </h2>
+    <h2 class="section-title">
+        What I Can <span>Develop For You</span>
+    </h2>
 
-  <div class="grid">
+    <div class="grid">
 
-    <div class="card">
-      <div class="icon">⌘</div>
-      <h3>Web Development</h3>
-      <p>
-        Personal portfolio, business websites
-        and landing pages.
-      </p>
+        <div class="card">
+            <div class="icon">⌘</div>
+            <h3>Web Development</h3>
+            <p>
+                Personal portfolio, business websites
+                and landing pages.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">▣</div>
+            <h3>App Development</h3>
+            <p>
+                Fast and lightweight Android WebView
+                and native apps.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙</div>
+            <h3>Automation &amp; Bots</h3>
+            <p>
+                Python script automation and
+                Telegram bot integration.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✧</div>
+            <h3>UI/UX Redesign</h3>
+            <p>
+                Purani website ko modern luxury
+                dark gold look dena.
+            </p>
+        </div>
+
     </div>
-
-    <div class="card">
-      <div class="icon">▣</div>
-      <h3>App Development</h3>
-      <p>
-        Fast and lightweight Android WebView
-        and native apps.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">⚙</div>
-      <h3>Automation &amp; Bots</h3>
-      <p>
-        Python script automation and
-        Telegram bot integration.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">✧</div>
-      <h3>UI/UX Redesign</h3>
-      <p>
-        Purani website ko modern luxury
-        dark gold look dena.
-      </p>
-    </div>
-
-  </div>
 
 </section>
 
@@ -506,40 +526,40 @@ footer {
 
 <section>
 
-  <h2 class="section-title">
-    Why Work <span>With Me?</span>
-  </h2>
+    <h2 class="section-title">
+        Why Work <span>With Me?</span>
+    </h2>
 
-  <div class="grid">
+    <div class="grid">
 
-    <div class="card">
-      <div class="icon">↯</div>
-      <h3>Super Fast Performance</h3>
-      <p>
-        Clean code with ultra-fast
-        page load speed.
-      </p>
+        <div class="card">
+            <div class="icon">↯</div>
+            <h3>Super Fast Performance</h3>
+            <p>
+                Clean code with ultra-fast
+                page load speed.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">▤</div>
+            <h3>100% Mobile Responsive</h3>
+            <p>
+                Har mobile screen par perfect fit
+                &amp; high resolution UI.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">☏</div>
+            <h3>Direct WhatsApp Support</h3>
+            <p>
+                Direct communication and
+                project updates.
+            </p>
+        </div>
+
     </div>
-
-    <div class="card">
-      <div class="icon">▤</div>
-      <h3>100% Mobile Responsive</h3>
-      <p>
-        Har mobile screen par perfect fit
-        &amp; high resolution UI.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">☏</div>
-      <h3>Direct WhatsApp Support</h3>
-      <p>
-        Direct communication and
-        project updates.
-      </p>
-    </div>
-
-  </div>
 
 </section>
 
@@ -547,18 +567,20 @@ footer {
 
 <section>
 
-  <h2 class="section-title">
-    Technologies <span>&amp; Tools</span>
-  </h2>
+    <h2 class="section-title">
+        Technologies <span>&amp; Tools</span>
+    </h2>
 
-  <div class="tools">
-    <span class="tool">HTML5</span>
-    <span class="tool">CSS3</span>
-    <span class="tool">JavaScript</span>
-    <span class="tool">Python</span>
-    <span class="tool">Flask Framework</span>
-    <span class="tool">Android Apps</span>
-  </div>
+    <div class="tools">
+
+        <span class="tool">HTML5</span>
+        <span class="tool">CSS3</span>
+        <span class="tool">JavaScript</span>
+        <span class="tool">Python</span>
+        <span class="tool">Flask Framework</span>
+        <span class="tool">Android Apps</span>
+
+    </div>
 
 </section>
 
@@ -566,43 +588,43 @@ footer {
 
 <section id="contact" class="contact">
 
-  <h2>Contact Me Directly</h2>
+    <h2>Contact Me Directly</h2>
 
-  <p>
-    Tell me what you want to create.
-    Let's discuss your project.
-  </p>
+    <p>
+        Tell me what you want to create.
+        Let's discuss your project.
+    </p>
 
-  <div class="actions">
+    <div class="actions">
 
-    <!-- WHATSAPP BUTTON -->
+        <!-- WHATSAPP -->
 
-    <a
-      class="btn whatsapp"
-      target="_blank"
-      rel="noopener"
-      href="https://wa.me/919931616212?text=Hello%20Dolat%2C%0A%0AWhat%20do%20you%20want%20to%20get%20developed%3F%0AWhat%20is%20your%20email%3F%0AWhat%20is%20your%20name%3F"
-    >
-      CONTACT ON WHATSAPP ↗
-    </a>
+        <a
+            class="btn whatsapp"
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/919931616212?text=Hello%20Dolat%2C%0A%0AWhat%20do%20you%20want%20to%20get%20developed%3F%0AWhat%20is%20your%20email%3F%0AWhat%20is%20your%20name%3F"
+        >
+            CONTACT ON WHATSAPP ↗
+        </a>
 
-    <!-- EMAIL BUTTON -->
+        <!-- EMAIL -->
 
-    <a
-      class="btn email"
-      href="mailto:amritraja3332@gmail.com?subject=Project%20Enquiry&amp;body=Hello%20Dolat%2C%0D%0A%0D%0AWhat%20do%20you%20want%20to%20get%20developed%3F%0D%0AWhat%20is%20your%20email%3F%0D%0AWhat%20is%20your%20name%3F"
-    >
-      Email Me ↗
-    </a>
+        <a
+            class="btn email"
+            href="mailto:amritraja3332@gmail.com?subject=Project%20Enquiry&amp;body=Hello%20Dolat%2C%0D%0A%0D%0AWhat%20do%20you%20want%20to%20get%20developed%3F%0D%0AWhat%20is%20your%20email%3F%0D%0AWhat%20is%20your%20name%3F"
+        >
+            Email Me ↗
+        </a>
 
-  </div>
+    </div>
 
 </section>
 
 </main>
 
 <footer>
-  © 2026 Dolat Sahu · Innovate · Develop · Grow Together
+    © 2026 Dolat Sahu · Innovate · Develop · Grow Together
 </footer>
 
 </div>
